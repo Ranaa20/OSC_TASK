@@ -1,0 +1,34 @@
+1-mkdir 'rana essam'
+  cd Rana\ essam/
+
+2-mkdir Documents
+  cd Documents
+  touch file1.txt file2.txt file3.txt
+  ls
+
+3-cd ..
+  touch .hidden_file
+  ls -a
+
+4-nano file1.txt
+  cat file1.txt
+
+5-cd Documents
+
+6-mkdir ./-
+  cd ./-
+
+7-cp -r ~/Documents ~/Rana\ essam/My_Documents
+  ls ~/Rana\ essam
+
+8-cat .hidden_file
+  mv .hidden_file ~/Rana\ essam/My_Documents
+  nano .hidden_file
+  cat .hidden_file
+
+9-mv file2.txt file3.txt ~/Rana\ essam/My_Documents
+  ls ~/Rana\ essam/My_Documents
+
+10-cd ~/Rana\ essam
+   rm -r Rana\ essam
+   ls ~
