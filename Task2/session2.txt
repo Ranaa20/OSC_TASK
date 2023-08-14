@@ -1,0 +1,35 @@
+1- ls
+   cd Downloads
+   ls
+   unzip Updated-Task-02.zip
+   cd Updated-Task-02
+   ls -a
+    
+2- tar -xf .level-1.tar
+   nano README.txt 
+   ls -a
+   cd .level-1
+   ls -a
+   nano README.txt 
+   
+3- nano README.txt 
+   tar -xf level-2
+   ls
+   cd level-2
+   ls -a
+   nano README.txt 
+   find -name level-3
+   cd ./gBT5u0vLT5/
+  
+4- tar -xf level-3
+   cd level-3
+   nano README.txt 
+   ls -l
+   ls -l X6lkChFKsj
+   nano WfUKyzFeEv
+   
+5- find -size 73c
+   cd ./m7lRDpRTUJ
+   nano xVMvVOKNW5
+
+
