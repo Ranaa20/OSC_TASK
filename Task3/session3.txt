@@ -1,0 +1,35 @@
+1-sudo useradd osc
+  sudo passwd osc 
+  sudo groupadd group_osc 
+  sudo usermod -aG group_osc  osc
+  sudo visudo
+  su - osc
+
+
+2-mkdir "permission practice"
+  cd permission_practice
+  touch public_file.txt
+  chmod 666 public_file.txt
+  touch private_file.txt
+  chmod 600 private_file.txt
+  touch executable_script.sh
+  chmod 750 executable_script.sh
+
+
+3-cd /home/osc/permission\ practice
+  sudo chown ranaessam private_file.txt
+  sudo chgrp group_group private_file.txt
+
+
+4-sleep 1000 &
+  echo $!
+  kill 5952
+  vim 
+  killall vim
+  ps -p 5952
+  ps aux | grep vim
+
+
+5-sudo apt update
+  sudo apt install neofetch
+  sudo apt remove neofetch
