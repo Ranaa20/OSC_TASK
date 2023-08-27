@@ -1,0 +1,124 @@
+1-touch system_info.sh
+  which bash
+  nano system_info.sh 
+  #!/usr/bin/bash
+  username=$(whoami)
+  kernal_version=$(uname -r)
+  echo "Username: $username"
+  echo "Kernal Version: $kernal_version"
+  ./system_info.sh
+  chmod u+x system_info.sh
+  ./system_info.sh 
+  
+
+
+2-touch file_check.sh
+  ls
+  chmod u+x file_check.sh
+  nano file_check.sh
+  #!/usr/bin/bash
+
+  filename=$1
+  directory=$2
+
+  file_path="$directory/$filename"
+
+  if [ -f "$file_path" ]; then
+    echo "File exists"
+    echo "Contents of $filename:"
+    cat "$file_path"
+  else
+    echo "File does not exist"
+  fi
+  ./file_check.sh file1.txt /home/ranaessam/Documents
+ 
+  ./file_check.sh file2.txt /home/ranaessam/Documents
+
+3- touch rename_files.sh
+   nano rename_files.sh 
+   #!/usr/bin/bash
+   extension=$1
+   new_name=$2
+   counter=1
+
+   for file in *.$extension; do
+    new_file="${new_name}${counter}.${extension}"
+    mv "$file" "$new_file"
+    counter=$((counter + 1))
+   done
+   chmod u+x rename_files.sh 
+   ls
+   ./rename_files.sh jpeg image
+
+4-touch calculator.sh
+  nano calculator.sh 
+  #!/usr/bin/bash
+
+
+Addition() {
+    echo "Enter the first number: "
+    read num1
+    echo "Enter the second number: "
+    read num2
+    result=$(($num1 + $num2))
+    echo "$num1 + $num2 = $result"
+}
+
+
+Subtraction() {
+    echo "Enter the first number: "
+    read num1
+    echo "Enter the second number: "
+    read num2
+    result=$(($num1 - $num2))
+    echo "$num1 - $num2 = $result"
+}
+Multiplication() {
+    echo "Enter the first number: "
+    read num1
+    echo "Enter the second number: "
+    read num2
+    result=$(($num1 * $num2))
+    echo "$num1 * $num2 = $result"
+}
+
+while true; do
+    echo "1. Addition"
+    echo "2. Subtraction"
+    echo "3. Multiplication"
+    echo "4. Exit"
+    echo "Enter your choice: "
+    read choice
+
+    case $choice in
+        1)
+            Addition
+            ;;
+        2)
+            Subtraction
+            ;;
+        3)
+            Multiplication
+            ;;
+        4)
+            echo "Exiting..."
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            ;;
+    esac
+    
+    echo
+done
+
+
+  chmod u+x calculator.sh 
+  ./calculator.sh 
+
+
+
+
+
+
+
